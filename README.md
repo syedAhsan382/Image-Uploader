@@ -2,6 +2,8 @@
 
 A simple image uploader built with plain HTML, CSS, and JavaScript. Drag and drop images (or browse for them), see a preview card for each one with a progress bar, and keep them saved in the browser even after refreshing the page.
 
+**🔗 Live Demo:** https://image-uploader-delta-flax.vercel.app 
+
 > **Note:** This is a front-end practice project. Nothing is sent to a server. The progress bar is simulated, and images are stored in the browser's `localStorage`.
 
 <!-- Add a screenshot or GIF of the app here: -->
@@ -83,6 +85,7 @@ image-uploader/
 **Ahsan**
 
 - GitHub: [syedAhsan382](https://github.com/syedAhsan382)
+- LinkedIn: [Syed Ahsan](https://www.linkedin.com/in/syed-muhammad-ahsan-263ab8351)
 
 ## License
 
