@@ -1,4 +1,4 @@
- const dropZone     = document.getElementById('dropZone');
+  const dropZone     = document.getElementById('dropZone');
   const fileInput    = document.getElementById('fileInput');
   const previewGrid  = document.getElementById('previewGrid');
   const errorBox     = document.getElementById('errorBox');
@@ -61,7 +61,23 @@
       showError(`❌ "${file.name}" is too large (max ${MAX_SIZE_MB}MB for persistence).`);
       return;
     }
+    // Duplicate check
+    if (isDuplicate(file)) {
+      showError(`❌ "${file.name}" is already uploaded.`);
+      return;
+    }
     processFile(file);
+  }
+
+  // Dupicate checking Function
+  function isDuplicate(file) {
+    const names = document.querySelectorAll('.file-name');
+    for (const n of names) {
+      if (n.textContent === file.name) {
+        return true;
+      }
+    }
+    return false;
   }
 
   // ---------- FileReader + simulated progress ----------
